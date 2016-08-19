@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "48c3322a12a12d705b40c8f7653c6b36",
-    "content-hash": "32b8c9a4342c6514df73892f54ed6d23",
+    "hash": "26d5316618f4d9007ff6736b79081aa8",
+    "content-hash": "0c7705ebdbbe4b48df6e1f34b2c996a9",
     "packages": [
         {
             "name": "cogpowered/finediff",
@@ -578,6 +578,83 @@
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
             "time": "2016-07-26 04:40:54"
+        },
+        {
+            "name": "typo3-ter/bootstrap-package",
+            "version": "7.0.2",
+            "dist": {
+                "type": "t3x",
+                "url": "https://typo3.org/extensions/repository/download/bootstrap_package/7.0.2/t3x/",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "typo3/cms-core": ">= 7.6.2, <= 8.99.99"
+            },
+            "conflict": {
+                "typo3-ter/dyncss": "*",
+                "typo3-ter/fluidpages": "*",
+                "typo3-ter/themes": "*"
+            },
+            "replace": {
+                "bootstrap_package": "self.version",
+                "typo3-ter/bootstrap_package": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "BK2K\\BootstrapPackage\\": "Classes"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Benjamin Kott",
+                    "email": "info@bk2k.info",
+                    "company": "private",
+                    "username": "benjaminkott"
+                }
+            ],
+            "description": "Bootstrap Package delivers a full configured frontend theme for TYPO3, based on the Bootstrap CSS Framework.",
+            "time": "2016-03-30 12:07:27"
+        },
+        {
+            "name": "typo3-ter/introduction",
+            "version": "2.3.0",
+            "dist": {
+                "type": "t3x",
+                "url": "https://typo3.org/extensions/repository/download/introduction/2.3.0/t3x/",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "typo3-ter/bootstrap-package": ">= 7.0.0, <= 7.99.99",
+                "typo3/cms-core": ">= 7.6.0, <= 8.9.99"
+            },
+            "replace": {
+                "introduction": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "classmap": [
+                    ""
+                ],
+                "exclude-from-classmap": [
+                    "Migrations",
+                    "Tests",
+                    "tests",
+                    "class.ext_update.php"
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Introduction Package Team",
+                    "email": "",
+                    "company": "",
+                    "username": "typo3v4"
+                }
+            ],
+            "description": "This package delivers a new website (page tree) and shows all out-of-the-box features of TYPO3, and includes a theme based on Twitter Bootstrap 3, and a style editor to customize the design. Sample editors and backend groups are added",
+            "time": "2016-03-23 13:51:49"
         },
         {
             "name": "typo3/class-alias-loader",

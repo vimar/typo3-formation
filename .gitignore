@@ -1,21 +1,33 @@
+#############################
+# TYPO3 CMS Base Distribution
+#############################
+# IDE/System folder
+.DS_Store
+.idea
+nbproject
+
+# composer folder
+src/vendor
+
 ## TYPO3 v6.2
 # Ignore several upload and file directories.
-/fileadmin/user_upload/
-/fileadmin/_temp_/
-/fileadmin/_processed_/
-/uploads/
+src/web/fileadmin/user_upload/
+src/web/fileadmin/_temp_/
+src/web/fileadmin/_processed_/
+src/web/fileadmin/introduction/
+src/web/uploads/
+
 # Ignore cache
-/typo3conf/temp_CACHED*
-/typo3conf/temp_fieldInfo.php
-/typo3conf/deprecation_*.log
-/typo3conf/AdditionalConfiguration.php
+src/web/typo3conf/temp_CACHED*
+src/web/typo3conf/deprecation_*.log
+
 # Ignore system folders, you should have them symlinked.
 # If not comment out the following entries.
-/typo3
-/typo3_src
-/typo3_src-*
-/.htaccess
-/index.php
+src/web/typo3
+src/web/typo3_src
+src/web/typo3_src-*
+src/web/.htaccess
+src/web/index.php
 # Ignore temp directory.
-/typo3temp/
-/nbproject
+
+src/web/typo3temp/
