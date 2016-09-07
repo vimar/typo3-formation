@@ -16,5 +16,6 @@
 		}
 	},
 	"require-dev": {
+		"typo3-ter/extension-builder": "^7.6"
 	}
 }

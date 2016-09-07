@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "26d5316618f4d9007ff6736b79081aa8",
-    "content-hash": "0c7705ebdbbe4b48df6e1f34b2c996a9",
+    "hash": "36e0bdd1bf43d4a4111c73248425af57",
+    "content-hash": "6bd2b93de991d60ce3ef054033f0e3c9",
     "packages": [
         {
             "name": "cogpowered/finediff",
@@ -473,16 +473,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v2.7.16",
+            "version": "v2.7.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "61a73eabb2cf16681eda784b8755c587a869ec42"
+                "reference": "cc3d188345b84d27a931db0969b0ff36272f451c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/61a73eabb2cf16681eda784b8755c587a869ec42",
-                "reference": "61a73eabb2cf16681eda784b8755c587a869ec42",
+                "url": "https://api.github.com/repos/symfony/console/zipball/cc3d188345b84d27a931db0969b0ff36272f451c",
+                "reference": "cc3d188345b84d27a931db0969b0ff36272f451c",
                 "shasum": ""
             },
             "require": {
@@ -528,20 +528,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2016-07-30 07:17:26"
+            "time": "2016-09-06 07:26:07"
         },
         {
             "name": "symfony/finder",
-            "version": "v2.7.16",
+            "version": "v2.7.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "864a73cc1b5f7a597ce8f74ae31851ffc83d7353"
+                "reference": "2716347131481656cc613d98ec12228bae81c8c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/864a73cc1b5f7a597ce8f74ae31851ffc83d7353",
-                "reference": "864a73cc1b5f7a597ce8f74ae31851ffc83d7353",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/2716347131481656cc613d98ec12228bae81c8c3",
+                "reference": "2716347131481656cc613d98ec12228bae81c8c3",
                 "shasum": ""
             },
             "require": {
@@ -577,7 +577,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2016-07-26 04:40:54"
+            "time": "2016-08-23 19:36:25"
         },
         {
             "name": "typo3-ter/bootstrap-package",
@@ -983,7 +983,50 @@
             "time": "2016-07-05 09:38:42"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "typo3-ter/extension-builder",
+            "version": "7.6.0",
+            "dist": {
+                "type": "t3x",
+                "url": "https://typo3.org/extensions/repository/download/extension_builder/7.6.0/t3x/",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "typo3/cms-core": ">= 7.6.0, <= 7.6.99"
+            },
+            "replace": {
+                "extension_builder": "self.version",
+                "typo3-ter/extension_builder": "self.version"
+            },
+            "suggest": {
+                "typo3-ter/phpunit": "*"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "classmap": [
+                    ""
+                ],
+                "exclude-from-classmap": [
+                    "Migrations",
+                    "Tests",
+                    "tests",
+                    "class.ext_update.php"
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Nico de Haen",
+                    "email": "mail@ndh-websolutions.de",
+                    "company": "",
+                    "username": "nicodh"
+                }
+            ],
+            "description": "The Extension Builder helps you build and manage your Extbase based TYPO3 extensions.",
+            "time": "2015-11-23 00:02:22"
+        }
+    ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],
