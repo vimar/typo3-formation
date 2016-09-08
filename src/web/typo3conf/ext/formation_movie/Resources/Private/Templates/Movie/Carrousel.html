@@ -1,0 +1,50 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="width: 600px">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <f:for each="{movies}" as="movie" iteration="iterator">
+                <li data-target="#carousel-example-generic"
+                    data-slide-to="{iterator.index}"
+                    class="{f:if(condition: iterator.isFirst, then: 'active')}"></li>
+            </f:for>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <f:for each="{movies}" as="movie" iteration="iterator">
+                <div class="item {f:if(condition: iterator.isFirst, then: 'active')}">
+                    <f:if condition="{movie.poster}">
+                        <f:image image="{movie.poster}" width="600" />
+                    </f:if>
+                    <div class="carousel-caption">
+                        {movie.title}
+                    </div>
+                </div>
+            </f:for>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</f:section>

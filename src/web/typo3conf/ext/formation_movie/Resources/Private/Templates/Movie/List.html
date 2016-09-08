@@ -1,0 +1,46 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+
+<f:flashMessages />
+
+	<strong>{moviesNumber}</strong>
+<table  class="tx_formationmovie">
+	<thead>
+		<tr>
+			<th><f:translate key="tx_formationmovie_domain_model_movie.title" /></th>
+			<th><f:translate key="tx_formationmovie_domain_model_movie.release_date" /></th>
+			<th><f:translate key="tx_formationmovie_domain_model_movie.story_line" /></th>
+			<th><f:translate key="tx_formationmovie_domain_model_movie.poster" /></th>
+			<th> </th>
+			<th> </th>
+		</tr>
+	</thead>
+
+	<tbody>
+
+		<f:for each="{movies}" as="movie">
+
+			<tr>
+				<td><f:link.action action="show" arguments="{movie : movie}"> {movie.title}</f:link.action></td>
+				<td><f:link.action action="show" arguments="{movie : movie}"> {movie.releaseDate -> f:format.date(format : 'Y')}</f:link.action></td>
+				<td><f:link.action action="show" arguments="{movie : movie}"> {movie.storyLine}</f:link.action></td>
+				<td><f:link.action action="show" arguments="{movie : movie}"> {movie.poster.originalResource.name}</f:link.action></td>
+				<td><f:link.action action="edit" arguments="{movie : movie}">Edit</f:link.action></td>
+			</tr>
+		</f:for>
+	</tbody>
+</table>
+</f:section>
