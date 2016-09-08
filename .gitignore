@@ -31,3 +31,11 @@ src/web/index.php
 # Ignore temp directory.
 
 src/web/typo3temp/
+
+# Ignore community extensions.
+src/web/typo3conf/ext/bootstrap_package
+src/web/typo3conf/ext/extension_builder
+src/web/typo3conf/ext/introduction
+
+# Ignore community translations folder
+src/web/typo3conf/l10n
