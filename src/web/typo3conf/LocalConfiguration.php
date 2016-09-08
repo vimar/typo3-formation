@@ -16,9 +16,22 @@ return [
     ],
     'EXT' => [
         'extConf' => [
+            'extension_builder' => 'a:3:{s:15:"enableRoundtrip";s:1:"1";s:15:"backupExtension";s:1:"1";s:9:"backupDir";s:35:"uploads/tx_extensionbuilder/backups";}',
+            'formation_movie' => 'a:0:{}',
             'introduction' => 'a:0:{}',
+            'linkvalidator' => 'a:0:{}',
+            'news' => 'a:13:{s:13:"prependAtCopy";s:1:"1";s:6:"tagPid";s:1:"1";s:12:"rteForTeaser";s:1:"0";s:22:"contentElementRelation";s:1:"0";s:13:"manualSorting";s:1:"0";s:19:"categoryRestriction";s:0:"";s:34:"categoryBeGroupTceFormsRestriction";s:1:"0";s:19:"dateTimeNotRequired";s:1:"0";s:11:"archiveDate";s:4:"date";s:24:"showAdministrationModule";s:1:"1";s:12:"showImporter";s:1:"0";s:18:"storageUidImporter";s:1:"1";s:22:"resourceFolderImporter";s:12:"/news_import";}',
+            'recycler' => 'a:0:{}',
             'rsaauth' => 'a:1:{s:18:"temporaryDirectory";s:0:"";}',
             'saltedpasswords' => 'a:2:{s:3:"BE.";a:4:{s:21:"saltedPWHashingMethod";s:41:"TYPO3\\CMS\\Saltedpasswords\\Salt\\PhpassSalt";s:11:"forceSalted";i:0;s:15:"onlyAuthService";i:0;s:12:"updatePasswd";i:1;}s:3:"FE.";a:5:{s:7:"enabled";i:1;s:21:"saltedPWHashingMethod";s:41:"TYPO3\\CMS\\Saltedpasswords\\Salt\\PhpassSalt";s:11:"forceSalted";i:0;s:15:"onlyAuthService";i:0;s:12:"updatePasswd";i:1;}}',
+            'workspaces' => 'a:0:{}',
+        ],
+    ],
+    'EXTCONF' => [
+        'lang' => [
+            'availableLanguages' => [
+                'fr',
+            ],
         ],
     ],
     'FE' => [
@@ -34,7 +47,6 @@ return [
             'TYPO3\CMS\Install\Updates\BackendUserStartModuleUpdate' => 1,
             'TYPO3\CMS\Install\Updates\Compatibility6ExtractionUpdate' => 1,
             'TYPO3\CMS\Install\Updates\ContentTypesToTextMediaUpdate' => 1,
-            'TYPO3\CMS\Install\Updates\ExtensionManagerTables' => 1,
             'TYPO3\CMS\Install\Updates\FileListIsStartModuleUpdate' => 1,
             'TYPO3\CMS\Install\Updates\FilesReplacePermissionUpdate' => 1,
             'TYPO3\CMS\Install\Updates\LanguageIsoCodeUpdate' => 1,
