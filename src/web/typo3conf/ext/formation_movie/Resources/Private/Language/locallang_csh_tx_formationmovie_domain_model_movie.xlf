@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-09-08T10:07:44Z" product-name="formation_movie">
+		<header/>
+		<body>
+			<trans-unit id="title.description">
+				<source>title</source>
+			</trans-unit>
+			<trans-unit id="release_date.description">
+				<source>releaseDate</source>
+			</trans-unit>
+			<trans-unit id="story_line.description">
+				<source>storyLine</source>
+			</trans-unit>
+			<trans-unit id="poster.description">
+				<source>poster</source>
+			</trans-unit>
+			<trans-unit id="genres.description">
+				<source>genres</source>
+			</trans-unit>
+			<trans-unit id="actors.description">
+				<source>actors</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

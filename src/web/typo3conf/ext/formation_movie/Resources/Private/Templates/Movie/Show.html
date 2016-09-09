@@ -1,0 +1,58 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+<h1>Single View for Movie</h1>
+
+<f:flashMessages />
+
+  <table class="tx-formation-movie" >
+    <tr>
+      <td>
+        <f:translate key="tx_formationmovie_domain_model_movie.title" />
+      </td>
+      <td>
+        {movie.title}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <f:translate key="tx_formationmovie_domain_model_movie.release_date" />
+      </td>
+      <td>
+        {movie.releaseDate -> f:format.date()}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <f:translate key="tx_formationmovie_domain_model_movie.story_line" />
+      </td>
+      <td>
+        {movie.storyLine}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <f:translate key="tx_formationmovie_domain_model_movie.poster" />
+      </td>
+      <td>
+        <f:if condition="{movie.poster}">
+          <f:image image="{movie.poster}" width="200"/>
+        </f:if>
+      </td>
+    </tr>
+  </table>
+<f:link.action action="list">Back to list</f:link.action><br />
+<f:link.action action="new">New Movie</f:link.action>
+</f:section>

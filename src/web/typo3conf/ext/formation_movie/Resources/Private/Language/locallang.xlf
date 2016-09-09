@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-09-08T10:07:44Z" product-name="formation_movie">
+		<header/>
+		<body>
+			<trans-unit id="tx_formationmovie_domain_model_movie">
+				<source>Movie</source>
+			</trans-unit>
+			<trans-unit id="tx_formationmovie_domain_model_movie.title">
+				<source>Titre</source>
+			</trans-unit>
+			<trans-unit id="tx_formationmovie_domain_model_movie.release_date">
+				<source>Release Date</source>
+			</trans-unit>
+			<trans-unit id="tx_formationmovie_domain_model_movie.story_line">
+				<source>Story Line</source>
+			</trans-unit>
+			<trans-unit id="tx_formationmovie_domain_model_movie.poster">
+				<source>Poster</source>
+			</trans-unit>
+			<trans-unit id="tx_formationmovie_domain_model_movie.genres">
+				<source>Genres</source>
+			</trans-unit>
+			<trans-unit id="tx_formationmovie_domain_model_movie.actors">
+				<source>Actors</source>
+			</trans-unit>
+			<trans-unit id="tx_formationmovie_domain_model_genre">
+				<source>Genre</source>
+			</trans-unit>
+			<trans-unit id="tx_formationmovie_domain_model_genre.value">
+				<source>Value</source>
+			</trans-unit>
+			<trans-unit id="tx_formationmovie_domain_model_actor">
+				<source>Actor</source>
+			</trans-unit>
+			<trans-unit id="tx_formationmovie_domain_model_actor.first_name">
+				<source>First Name</source>
+			</trans-unit>
+			<trans-unit id="tx_formationmovie_domain_model_actor.last_name">
+				<source>Last Name</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

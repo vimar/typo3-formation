@@ -1,0 +1,17 @@
+
+<label for="title">
+	<f:translate key="tx_formationmovie_domain_model_movie.title" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield property="title" /><br />
+<label for="releaseDate">
+	<f:translate key="tx_formationmovie_domain_model_movie.release_date" />
+</label><br />
+	<f:form.textfield property="releaseDate"  value="{movie.releaseDate->f:format.date()}" /><br />
+<label for="storyLine">
+	<f:translate key="tx_formationmovie_domain_model_movie.story_line" />
+</label><br />
+	<f:form.textfield property="storyLine" /><br />
+<label for="poster">
+	<f:translate key="tx_formationmovie_domain_model_movie.poster" />
+</label><br />
+	<span>File upload is not implemented!</span><br  /><br />
