@@ -3,6 +3,8 @@ return array(
 	'ctrl' => array(
 		'title'	=> 'LLL:EXT:formation_movie/Resources/Private/Language/locallang_db.xlf:tx_formationmovie_domain_model_actor',
 		'label' => 'first_name',
+		'label_alt' => 'last_name',
+		'label_alt_force' => TRUE,
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',

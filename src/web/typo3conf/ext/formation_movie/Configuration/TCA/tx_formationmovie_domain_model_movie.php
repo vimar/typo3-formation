@@ -26,13 +26,29 @@ return array(
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, release_date, story_line, poster, genres, actors',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, title, release_date, story_line, poster, genres, actors, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => array('showitem' => 'mount_pid_ol,sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, title;mon titre, release_date, story_line, poster, --div--;Relations, genres, actors, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, --palette--;palette;1, hidden'),
 	),
 	'palettes' => array(
-		'1' => array('showitem' => ''),
+		'1' => array('showitem' => 'starttime, endtime'),
 	),
 	'columns' => array(
-	
+		'mount_pid_ol' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:cms/locallang_tca.xlf:pages.mount_pid_ol',
+			'config' => array(
+				'type' => 'radio',
+				'items' => array(
+					array(
+						'LLL:EXT:cms/locallang_tca.xlf:pages.mount_pid_ol.I.0',
+						0
+					),
+					array(
+						'LLL:EXT:cms/locallang_tca.xlf:pages.mount_pid_ol.I.1',
+						1
+					)
+				)
+			)
+		),
 		'sys_language_uid' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.language',
@@ -140,8 +156,8 @@ return array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:formation_movie/Resources/Private/Language/locallang_db.xlf:tx_formationmovie_domain_model_movie.story_line',
 			'config' => array(
-				'type' => 'input',
-				'size' => 30,
+				'type' => 'text',
+				'rows' => 10,
 				'eval' => 'trim'
 			),
 		),
@@ -214,12 +230,12 @@ return array(
 			'label' => 'LLL:EXT:formation_movie/Resources/Private/Language/locallang_db.xlf:tx_formationmovie_domain_model_movie.actors',
 			'config' => array(
 				'type' => 'select',
-				'renderType' => 'selectMultipleSideBySide',
+				'renderType' => 'selectCheckBox',
 				'foreign_table' => 'tx_formationmovie_domain_model_actor',
 				'MM' => 'tx_formationmovie_movie_actor_mm',
 				'size' => 10,
 				'autoSizeMax' => 30,
-				'maxitems' => 9999,
+				'maxitems' => 1,
 				'multiple' => 0,
 				'wizards' => array(
 					'_PADDING' => 1,
@@ -234,7 +250,7 @@ return array(
 						'popup_onlyOpenIfSelected' => 1,
 						'JSopenParams' => 'height=350,width=580,status=0,menubar=0,scrollbars=1',
 						),
-					'add' => Array(
+					/*'add' => Array(
 						'module' => array(
 							'name' => 'wizard_add',
 						),
@@ -246,7 +262,7 @@ return array(
 							'pid' => '###CURRENT_PID###',
 							'setValue' => 'prepend'
 						),
-					),
+					),*/
 				),
 			),
 		),

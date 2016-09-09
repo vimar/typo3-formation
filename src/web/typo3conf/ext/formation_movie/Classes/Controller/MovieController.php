@@ -55,7 +55,7 @@ class MovieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         // $this->movieRepository = $this->objectManager->get( \Universcience\FormationMovie\Domain\Repository\MovieRepository::class );
 
         $moviesNumber = $this->movieRepository->countAll();
-        $movies = $this->movieRepository->findAll();
+        $movies = $this->movieRepository->findAllByTitle('Tita');
 
         // example to retrieve titanic by Title
         // $titanic = $this->movieRepository->findOneByTitle('Titanic');

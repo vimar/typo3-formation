@@ -1,34 +1,39 @@
 
+# seulement les constantes déclarées ici seront éditables/surchargeables avec l'éditeur de constantes
+
 plugin.tx_formationmovie_movies {
-	view {
-		# cat=plugin.tx_formationmovie_movies/file; type=string; label=Path to template root (FE)
-		templateRootPath = EXT:formation_movie/Resources/Private/Templates/
-		# cat=plugin.tx_formationmovie_movies/file; type=string; label=Path to template partials (FE)
-		partialRootPath = EXT:formation_movie/Resources/Private/Partials/
-		# cat=plugin.tx_formationmovie_movies/file; type=string; label=Path to template layouts (FE)
-		layoutRootPath = EXT:formation_movie/Resources/Private/Layouts/
-	}
-	persistence {
-		# cat=plugin.tx_formationmovie_movies//a; type=string; label=Default storage PID
-		storagePid =
-	}
-	settings {
-		# cat=plugin.tx_formationmovie_movies//a; type=string; label=Default limit
-		carouselLimit = 3
-	}
+    view {
+        # cat=plugin.tx_formationmovie_movies/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:formation_movie/Resources/Private/Templates/
+        # cat=plugin.tx_formationmovie_movies/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:formation_movie/Resources/Private/Partials/
+        # cat=plugin.tx_formationmovie_movies/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:formation_movie/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_formationmovie_movies//a; type=string; label=Default storage PID
+        storagePid =
+    }
+    settings {
+        # cat=plugin.tx_formationmovie_movies//a; type=string; label=Default limit
+        carouselLimit =
+
+        # cat=plugin.tx_formationmovie_movies//a; type=int; label=Slider width
+        carouselWidth =
+    }
 }
 
 plugin.tx_formationmovie_genres {
-	view {
-		# cat=plugin.tx_formationmovie_genres/file; type=string; label=Path to template root (FE)
-		templateRootPath = EXT:formation_movie/Resources/Private/Templates/
-		# cat=plugin.tx_formationmovie_genres/file; type=string; label=Path to template partials (FE)
-		partialRootPath = EXT:formation_movie/Resources/Private/Partials/
-		# cat=plugin.tx_formationmovie_genres/file; type=string; label=Path to template layouts (FE)
-		layoutRootPath = EXT:formation_movie/Resources/Private/Layouts/
-	}
-	persistence {
-		# cat=plugin.tx_formationmovie_genres//a; type=string; label=Default storage PID
-		storagePid =
-	}
+    view {
+        # cat=plugin.tx_formationmovie_genres/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:formation_movie/Resources/Private/Templates/
+        # cat=plugin.tx_formationmovie_genres/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:formation_movie/Resources/Private/Partials/
+        # cat=plugin.tx_formationmovie_genres/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:formation_movie/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_formationmovie_genres//a; type=string; label=Default storage PID
+        storagePid =
+    }
 }

@@ -31,11 +31,36 @@ namespace Universcience\FormationMovie\Domain\Repository;
  */
 class MovieRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
+
+
     public function findLatestMovies($limit = 3)
     {
         $query = $this->createQuery();
         return $query->setOffset(0)
             ->setLimit(intval($limit))
             ->execute();
+    }
+
+    /**
+     * findAllByValue
+     * Find movie by term
+     *
+     * @param string $value
+     * @return Object $result
+     */
+    public function findAllByTitle($value) {
+
+        // instancie sa requête
+        $query = $this->createQuery();
+        // setRespectStoragePage = FALSE => ne pas limiter les enregistrements au dossier de stockage défini
+        $query->getQuerySettings()->setRespectStoragePage(FALSE);
+        // setStoragePageIds(array(37)); => cherche uniquement dans le dossier système ayant comme id "37"
+        // $query->getQuerySettings()->setStoragePageIds(FALSE);
+
+        $result = $query
+            ->matching($query->like('title', '%' . $value . '%'))
+            ->execute();
+
+        return $result;
     }
 }

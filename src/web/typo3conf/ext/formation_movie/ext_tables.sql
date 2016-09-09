@@ -12,6 +12,7 @@ CREATE TABLE tx_formationmovie_domain_model_movie (
 	poster int(11) unsigned NOT NULL default '0',
 	genres int(11) unsigned DEFAULT '0' NOT NULL,
 	actors int(11) unsigned DEFAULT '0' NOT NULL,
+	mount_pid_ol int(11) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,

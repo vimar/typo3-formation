@@ -13,7 +13,11 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="main">
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="width: 600px">
+
+    <f:comment> how debugging inside FLUID templates</f:comment>
+    <f:debug>{settings}</f:debug>
+
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="width: {settings.carouselWidth}px">
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <f:for each="{movies}" as="movie" iteration="iterator">
@@ -28,7 +32,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
             <f:for each="{movies}" as="movie" iteration="iterator">
                 <div class="item {f:if(condition: iterator.isFirst, then: 'active')}">
                     <f:if condition="{movie.poster}">
-                        <f:image image="{movie.poster}" width="600" />
+                        <f:image image="{movie.poster}" width="{settings.carouselWidth}" />
                     </f:if>
                     <div class="carousel-caption">
                         {movie.title}
