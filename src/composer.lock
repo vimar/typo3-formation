@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b39d6e36eec243617db175d849b7e01d",
-    "content-hash": "dc4e8aa16e95bca3003a550ec291d71c",
+    "hash": "d36015a4cb2d7a160cc7de6f7ce91325",
+    "content-hash": "75da4425abb4fb5383029f5e14db943d",
     "packages": [
         {
             "name": "cogpowered/finediff",
@@ -691,6 +691,79 @@
             ],
             "description": "Versatile news extension, based on extbase & fluid. Editor friendly, default integration of social sharing and many other features",
             "time": "2016-09-03 15:53:52"
+        },
+        {
+            "name": "typo3-ter/realurl",
+            "version": "2.0.15",
+            "dist": {
+                "type": "t3x",
+                "url": "https://typo3.org/extensions/repository/download/realurl/2.0.15/t3x/",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "php": ">= 5.3.2, <= 7.0.999",
+                "typo3/cms-core": ">= 6.2.0, <= 8.0.999"
+            },
+            "conflict": {
+                "typo3-ter/cooluri": "*",
+                "typo3-ter/simulatestatic": "*"
+            },
+            "replace": {
+                "realurl": "self.version"
+            },
+            "suggest": {
+                "typo3-ter/static-info-tables": ">= 6.2.0"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "DmitryDulepov\\Realurl\\": "Classes"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Dmitry Dulepov",
+                    "email": "dmitry.dulepov@gmail.com",
+                    "company": "",
+                    "username": "dmitry"
+                }
+            ],
+            "description": "Makes TYPO3 URLs search engine friendly. Donations are welcome to dmitry.dulepov@gmail.com. They help to support the extension!",
+            "time": "2016-09-08 10:38:34"
+        },
+        {
+            "name": "typo3-ter/vhs",
+            "version": "3.0.1",
+            "dist": {
+                "type": "t3x",
+                "url": "https://typo3.org/extensions/repository/download/vhs/3.0.1/t3x/",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "php": ">= 5.5.0, <= 7.0.99",
+                "typo3/cms-core": ">= 7.6.0, <= 8.2.99"
+            },
+            "replace": {
+                "vhs": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "FluidTYPO3\\Vhs\\": "Classes/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "FluidTYPO3 Team",
+                    "email": "claus@namelesscoder.net",
+                    "company": "",
+                    "username": "fluidtypo3"
+                }
+            ],
+            "description": "A collection of ViewHelpers to perform rendering tasks which are not natively supported by Fluid - for example: advanced formatters, math calculators, specialized conditions and Iterator/Array calculators and processors",
+            "time": "2016-07-29 00:45:18"
         },
         {
             "name": "typo3/class-alias-loader",
