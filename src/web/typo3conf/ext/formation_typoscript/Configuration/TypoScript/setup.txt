@@ -1,0 +1,30 @@
+page_destkop = PAGE
+
+# 10, 20 permet de configurer le BODY
+
+page_destkop.20 = TEXT
+page_destkop.20.value = Logo TYPO3
+page_destkop.stdWrap.typolink.parameter = http://www.typo3.org/
+page_destkop.stdWrap.typolink.ATagParams = class="externalwebsite"
+
+page_destkop.10 = TEXT
+page_destkop.10.value = Another Hello World!
+
+page_mobile = PAGE
+page_mobile {
+    typeNum = 2
+
+    10 = TEXT
+    10 {
+        value = Correct text
+        stdWrap.wrap = <h1>|</h1>
+    }
+    # 20 = FLUIDTEMPLATE
+}
+
+
+page_mobile.15 = TEXT
+page_mobile.15.value =               Hello mobinautes
+
+page_mobile.20 < page_desktop.20
+
