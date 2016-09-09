@@ -17,9 +17,31 @@ page_mobile {
     10 = TEXT
     10 {
         value = Correct text
-        stdWrap.wrap = <h1>|</h1>
+        stdWrap.wrap = <h1>|, because the postCObject is executed before the typolink function.</h1>
     }
-    # 20 = FLUIDTEMPLATE
+
+    90 = TEXT
+    # déclaration sur plusieurs lignes
+    90.value (
+        <script type="text/javascript">
+        // [G] 12/05/15 : Fix ScrollTo sur Firefox - DEBUT
+        $.fn.fixScrollTo= function() {
+        var hash = window.location.hash;
+        if(window.location.hash) {
+            if ($(window.location.hash).length > 0){
+                var fixOS =$(hash).offset();
+                $( this ).scrollTop( (fixOS.top-20) );
+            } else {
+                console.log("not found");
+            }
+        }
+        };
+        window.onload = function () {
+           $( "html,body" ).fixScrollTo();
+        }
+        // [G] 12/05/15 : Fix ScrollTo sur Firefox - FIN
+        </script>
+        )
 }
 
 
