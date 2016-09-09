@@ -1,14 +1,127 @@
-page_destkop = PAGE
+# Full Typoscript Reference: https://docs.typo3.org/typo3cms/TyposcriptReference/
+# TS in 45 min: https://docs.typo3.org/typo3cms/TyposcriptIn45MinutesTutorial/Index.html
+# Include ts files
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:formation_typoscript/Configuration/TypoScript/Blocks/blocks.txt">
+
+page_desktop = PAGE
 
 # 10, 20 permet de configurer le BODY
 
-page_destkop.20 = TEXT
-page_destkop.20.value = Logo TYPO3
-page_destkop.stdWrap.typolink.parameter = http://www.typo3.org/
-page_destkop.stdWrap.typolink.ATagParams = class="externalwebsite"
+page_desktop.5 = TEXT
+page_desktop.5.value = Logo TYPO3
 
-page_destkop.10 = TEXT
-page_destkop.10.value = Another Hello World!
+page_desktop.5.stdWrap.typolink.parameter = 3
+page_desktop.5.stdWrap.typolink.ATagParams = class="externalwebsite"
+
+page_desktop.1 < lib.textmenu
+
+page_desktop.10 = TEXT
+page_desktop.10.value = Another Hello World!
+
+page_desktop.8 = TEXT
+page_desktop.8.data = field:title
+
+# The CONTENT object executes a database query and loads the content.
+page_desktop.20 = CONTENT
+page_desktop.20.table = tt_content
+page_desktop.20.select {
+
+    # "sorting" is a column from the tt_content table and
+    # keeps track of the sorting order, which was specified in
+    # the backend.
+    orderBy = sorting
+
+    # Only select content from column "0" (the column called
+    # "normal").
+    where = colPos = 0
+}
+
+# For every result line from the database query (that means for every content
+# element) the renderObj is executed and the internal data array is filled
+# with the content. This ensures that we can call the .field property and we
+# get the according value.
+page_desktop.20.renderObj = COA
+page_desktop.20.renderObj {
+
+    5 = TEXT
+    5.stdWrap.field = uid
+    5.stdWrap.wrap = [|]
+
+    10 = TEXT
+
+    # The field tt_content.header normally holds the headline.
+    10.stdWrap.field = header
+
+    10.stdWrap.wrap = <h2 style="color: red">|</h2>
+
+    20 = TEXT
+
+    # The field tt_content.bodytext holds the content text.
+    20.stdWrap.field = bodytext
+    20.stdWrap.wrap = <p>|</p>
+}
+
+# vider le 20 pour la redéclarer
+page_desktop.20 >
+page_desktop.20 < styles.content.get
+
+# custom style pour une page dédiée
+# old way
+[PIDinRootline = 34]
+page_desktop.30 = TEXT
+page_desktop.30.value = je suis dans la rubrique "Customizing"
+[global]
+
+page_desktop.35 = COA
+page_desktop.35 {
+    10 = COA
+    10.10 = TEXT
+    10.10.value = <h3>
+
+    20 = TEXT
+    20.value = Je suis un COA
+
+    30 = TEXT
+    30.value = </h3>
+}
+
+
+config.concatenateCss = 1
+page_desktop.includeCSS {
+  file1 = EXT:formation_typoscript/Resources/Public/css/style.css
+}
+
+#
+[globalVar = TSFE:page|layout = 0]
+page_desktop.CSS_inlineStyle (
+ body { background-color: #888; }
+)
+[global]
+
+[globalVar = TSFE:page|layout = 10]
+page_desktop.CSS_inlineStyle (
+ body { background-color: #800; }
+)
+[global]
+
+[globalVar = TSFE:page|layout = 20]
+page_desktop.CSS_inlineStyle (
+ body { background-color: #808; }
+)
+[global]
+
+[globalVar = TSFE:page|layout = 30]
+page_desktop.CSS_inlineStyle (
+ body { background-color: #008; }
+)
+[global]
+
+# render custom column position
+page_desktop.42 < styles.content.get
+page_desktop.42.select.where = colPos = 42
+
+
+#########################################################################################################
 
 page_mobile = PAGE
 page_mobile {

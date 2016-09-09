@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="fr" datatype="plaintext" original="messages" date="2015-10-14T10:02:54Z" product-name="sorbonne_layout">
+        <header/>
+        <body>
+            <trans-unit id="pages.no_share">
+                <target>Désactiver le partage social</target>
+            </trans-unit>
+
+            <trans-unit id="pages.no_share.disable">
+                <target>Désactiver</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,13 @@
+
+# Modifier le backend pour adapter le champ "layout"
+TCEFORM.pages.layout {
+# Rename existing items
+    altLabels {
+        0 = Blanc
+    }
+	addItems {
+        10 = Rouge
+        20 = Vert
+        30 = Bleu
+    }
+}
